@@ -1,0 +1,131 @@
+/* override the default style of body */
+body {
+    padding: 0;
+    margin: 0;
+}
+
+/* container of grid system */
+.container {
+    width: 100%;
+}
+
+/* for items in each grid */
+.cell {
+    border: 1px solid #999;
+    background-color: #eee;
+    height: 50px;
+    margin: 10px;
+}
+
+/* for rows in grid system, actually a clear-fix*/
+.row {
+    overflow: auto;
+    zoom: 1;
+    clear: both;
+}
+
+/* styles below prepared for screens that smaller than 768px */
+
+[class*='col-'] {
+    float: left;
+    min-height: 1px;
+}
+
+.col-xs-12 {
+    width: 100%;
+}
+
+.col-xs-11 {
+    width: calc(100% * 11 / 12);
+}
+
+.col-xs-10 {
+    width: calc(100% * 10 / 12);
+}
+
+.col-xs-9 {
+    width: calc(100% * 9 / 12);
+}
+
+.col-xs-8 {
+    width: calc(100% * 8 / 12);
+}
+
+.col-xs-7 {
+    width: calc(100% * 7 / 12);
+}
+
+.col-xs-6 {
+    width: calc(100% * 6 / 12);
+}
+
+.col-xs-5 {
+    width: calc(100% * 5 / 12);
+}
+
+.col-xs-4 {
+    width: calc(100% * 4 / 12);
+}
+
+.col-xs-3 {
+    width: calc(100% * 3 / 12);
+}
+
+.col-xs-2 {
+    width: calc(100% * 2 / 12);
+}
+
+.col-xs-1 {
+    width: calc(100% / 12);
+}
+
+/* styles for larger screen */
+@media (min-width: 768px) {
+    .col-md-12 {
+        width: 100%;
+    }
+
+    .col-md-11 {
+        width: calc(100% * 11 / 12);
+    }
+
+    .col-md-10 {
+        width: calc(100% * 10 / 12);
+    }
+
+    .col-md-9 {
+        width: calc(100% * 9 / 12);
+    }
+
+    .col-md-8 {
+        width: calc(100% * 8 / 12);
+    }
+
+    .col-md-7 {
+        width: calc(100% * 7 / 12);
+    }
+
+    .col-md-6 {
+        width: calc(100% * 6 / 12);
+    }
+
+    .col-md-5 {
+        width: calc(100% * 5 / 12);
+    }
+
+    .col-md-4 {
+        width: calc(100% * 4 / 12);
+    }
+
+    .col-md-3 {
+        width: calc(100% * 3 / 12);
+    }
+
+    .col-md-2 {
+        width: calc(100% * 2 / 12);
+    }
+
+    .col-md-1 {
+        width: calc(100% / 12);
+    }
+}
