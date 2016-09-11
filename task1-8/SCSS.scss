@@ -1,0 +1,51 @@
+/* configurations */
+$col-count: 12;
+
+/* override the default style of body */
+body {
+  padding: 0;
+  margin: 0;
+}
+
+/* container of grid system */
+.container {
+  width: 100%;
+}
+
+/* for items in each grid */
+.cell {
+  border: 1px solid #999;
+  background-color: #eee;
+  height: 50px;
+  margin: 10px;
+}
+
+/* for rows in grid system, actually a clear-fix*/
+.row {
+  overflow: auto;
+  zoom: 1;
+  clear: both;
+}
+
+//function to generate grid
+@mixin generateGrid($tag){
+  @for $i from 1 through $col-count {
+    .col-#{$tag}-#{$i} {
+      width: calc(100% * #{$i} / #{$col-count});
+    }
+  }
+}
+
+//common style for col
+[class*='col-'] {
+  float: left;
+  min-height: 1px;
+}
+
+/* styles for smaller screen */
+@include generateGrid("xs");
+
+/* styles for larger screen */
+@media (min-width: 768px) {
+  @include generateGrid("md");
+}
